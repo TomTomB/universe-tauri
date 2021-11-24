@@ -2,12 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import * as Sentry from '@sentry/react';
+import { Integrations } from '@sentry/tracing';
+
+Sentry.init({
+  dsn: import.meta.env.VITE_SENTRY_URL,
+  enabled: import.meta.env.PROD,
+  integrations: [new Integrations.BrowserTracing()],
+  tracesSampleRate: 1.0,
+});
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 document.addEventListener(
@@ -16,5 +25,5 @@ document.addEventListener(
     event.preventDefault();
     return false;
   },
-  { capture: true }
+  { capture: true },
 );
