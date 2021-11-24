@@ -5,6 +5,13 @@ import './App.css';
 function App() {
   const [count, setCount] = useState(0);
 
+  // This is to test sentry
+  const breakIt = () => {
+    const foo = {};
+    const bar = (foo as any).bar.baz;
+    console.log(bar);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -14,6 +21,9 @@ function App() {
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
           </button>
+        </p>
+        <p>
+          <button onClick={() => breakIt()}>Break it!</button>
         </p>
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
