@@ -2,10 +2,8 @@
   "name": "universe-tauri",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "serve": "vite preview",
-    "tauri": "tauri"
+    "serve": "tauri dev",
+    "build": "tauri build"
   },
   "dependencies": {
     "@tauri-apps/api": "^1.0.0-beta.8",
