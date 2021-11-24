@@ -1,6 +1,6 @@
 {
   "name": "@universe/client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "serve": "tauri dev",
     "build": "tauri build"
