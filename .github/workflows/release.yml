@@ -37,7 +37,7 @@ jobs:
         id: changesets
         uses: changesets/action@master
         with:
-          version: pnpm ci:version
+          version: pnpm changeset version
           commit: 'chore: 🤖 update versions'
           title: 'chore: 🤖 update versions'
         env:

@@ -7,8 +7,7 @@
   "description": "Universe monorepo",
   "scripts": {
     "commit": "pnpm dlx git-cz",
-    "client": "pnpm --dir packages/client",
-    "ci:version": "changeset"
+    "client": "pnpm --dir packages/client"
   },
   "devDependencies": {
     "@changesets/cli": "^2.18.0",
