@@ -1,0 +1,20 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+document.addEventListener(
+  'contextmenu',
+  (event) => {
+    event.preventDefault();
+    return false;
+  },
+  { capture: true }
+);
