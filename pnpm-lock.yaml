@@ -13,6 +13,7 @@ importers:
       eslint-plugin-jsx-a11y: 6.5.1
       eslint-plugin-react: 7.27.1
       eslint-plugin-react-hooks: 4.3.0
+      git-format-staged: ^2.1.2
       husky: ^7.0.4
       prettier: 2.5.0
       typescript: 4.5.2
@@ -27,6 +28,7 @@ importers:
       eslint-plugin-jsx-a11y: 6.5.1_eslint@8.3.0
       eslint-plugin-react: 7.27.1_eslint@8.3.0
       eslint-plugin-react-hooks: 4.3.0_eslint@8.3.0
+      git-format-staged: 2.1.2
       husky: 7.0.4
       prettier: 2.5.0
       typescript: 4.5.2
@@ -2781,6 +2783,11 @@ packages:
     dependencies:
       call-bind: 1.0.2
       get-intrinsic: 1.1.1
+    dev: true
+
+  /git-format-staged/2.1.2:
+    resolution: {integrity: sha512-ieP6iEyMJQ9xPKJGFSmK4HELcDdYwUO84dG4NBKdjaSTOdsZgrW9paLaEau2D4daPQjLwSsgwdqtYjqoVxz3Lw==}
+    hasBin: true
     dev: true
 
   /github-from-package/0.0.0:
