@@ -1,5 +1,11 @@
 # @universe/client
 
+## 0.0.4
+
+### Patch Changes
+
+- [`a29b53a`](https://github.com/TomTomB/universe/commit/a29b53a9fe4efb0911b2a8f9bfd7dc9aedfc835e) Thanks [@TomTomB](https://github.com/TomTomB)! - Testing sentry action with a personal token
+
 ## 0.0.3
 
 ### Patch Changes
