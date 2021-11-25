@@ -68,6 +68,13 @@ jobs:
         env:
           DATA: ${{ steps.changesets.outputs.publishedPackages }}
 
-      - name: Do a sentry release
+      - name: Do a sentry release of universe/client
         if: steps.getClientVersion.outputs.result != 'false'
-        run: echo "${{steps.getClientVersion.outputs.result}}"
+        uses: getsentry/action-release@v1
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+        with:
+          environment: production
+          version: "${{steps.getClientVersion.outputs.result}}
