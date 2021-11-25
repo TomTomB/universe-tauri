@@ -2,3 +2,7 @@ dist
 node_modules
 .git
 .eslintcache
+**/src-tauri/target
+**/src-tauri/WixTools
+pnpm-lock.yaml
+CHANGELOG.md
