@@ -14,7 +14,7 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
-      - name: checkout code repository
+      - name: Checkout code repository
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
@@ -27,21 +27,21 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-
 
-      - name: setup node.js
+      - name: Setup node.js
         uses: actions/setup-node@v2
         with:
           node-version: 16
 
-      - name: install pnpm
+      - name: Install pnpm
         run: npm i pnpm@latest -g
 
-      - name: setup pnpm config
+      - name: Setup pnpm config
         run: pnpm config set store-dir $PNPM_CACHE_FOLDER
 
-      - name: install dependencies
+      - name: Install dependencies
         run: pnpm install
 
-      - name: create and publish versions
+      - name: Create and publish versions
         id: changesets
         uses: changesets/action@master
         with:
@@ -49,4 +49,12 @@ jobs:
           commit: 'chore: 🤖 update versions'
           publish: pnpm changeset tag
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN_WITH_REPO }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check for a universe/client version
+        uses: actions/github-script@v5
+        id: get-client-version
+        with:
+          script: console.log(process.env.DATA)
+        env:
+          DATA: ${{ steps.changesets.outputs.publishedPackages }}
