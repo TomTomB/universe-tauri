@@ -1,7 +1,7 @@
 {
   "package": {
-    "productName": "universe-tauri",
-    "version": "0.1.0"
+    "productName": "Universe Client",
+    "version": "0.0.7"
   },
   "build": {
     "distDir": "../dist",
@@ -13,7 +13,7 @@
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "com.tauri.dev",
+      "identifier": "digital.bornholdt.universe",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
@@ -53,7 +53,7 @@
     },
     "windows": [
       {
-        "title": "Universe",
+        "title": "Universe Client",
         "width": 1280,
         "height": 720,
         "center": true,
