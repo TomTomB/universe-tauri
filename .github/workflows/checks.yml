@@ -42,5 +42,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Run format check
+        run: pnpm format:check
+
       - name: Run light build of universe/client
         run: pnpm client build:light
