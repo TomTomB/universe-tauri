@@ -1,9 +1,9 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@1.6.2/schema.json",
-  "changelog": ["@changesets/changelog-github", { "repo": "TomTomB/universe" }],
+  "changelog": "@changesets/changelog-github",
   "commit": false,
   "linked": [],
-  "access": "public",
+  "access": "restricted",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": []
