@@ -1,5 +1,11 @@
 # @universe/client
 
+## 0.0.5
+
+### Patch Changes
+
+- [`4d9c468`](https://github.com/TomTomB/universe/commit/4d9c468ff96c80207d0fb9106039dca8a16f931b) Thanks [@TomTomB](https://github.com/TomTomB)! - Testing actions
+
 ## 0.0.4
 
 ### Patch Changes
