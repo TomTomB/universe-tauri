@@ -77,4 +77,4 @@ jobs:
           SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
         with:
           environment: production
-          version: "${{steps.getClientVersion.outputs.result}}
+          version: ${{ steps.getClientVersion.outputs.result }}
