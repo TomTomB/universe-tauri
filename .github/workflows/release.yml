@@ -68,6 +68,6 @@ jobs:
         env:
           DATA: ${{ steps.changesets.outputs.publishedPackages }}
 
-        - name: Do a sentry release 
-          if: steps.getClientVersion.outputs.result != 'false'
-          run: echo "${{steps.getClientVersion.outputs.result}}"
+      - name: Do a sentry release
+        if: steps.getClientVersion.outputs.result != 'false'
+        run: echo "${{steps.getClientVersion.outputs.result}}"
