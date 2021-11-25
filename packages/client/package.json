@@ -3,7 +3,8 @@
   "version": "0.0.7",
   "scripts": {
     "serve": "tauri dev",
-    "build": "tauri build"
+    "build": "tauri build",
+    "build:light": "vite build"
   },
   "dependencies": {
     "@tauri-apps/api": "1.0.0-beta.8",
