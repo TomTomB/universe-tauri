@@ -8,6 +8,7 @@
   "scripts": {
     "commit": "pnpm dlx git-cz",
     "client": "pnpm --dir packages/client",
+    "lint": "eslint .",
     "format:check": "prettier --check .",
     "format:write": "prettier --write ."
   },

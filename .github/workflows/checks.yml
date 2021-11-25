@@ -45,5 +45,8 @@ jobs:
       - name: Run format check
         run: pnpm format:check
 
+      - name: Run lint check
+        run: pnpm lint
+
       - name: Run light build of universe/client
         run: pnpm client build:light
