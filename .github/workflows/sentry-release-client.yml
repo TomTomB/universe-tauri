@@ -1,0 +1,32 @@
+name: Sentry Release - Client
+
+on:
+  push:
+    tags:
+      - '@universe/client@*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout git repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: actions/github-script@v5
+        id: set-version-string
+        with:
+          script: return context.ref.substring(versionStr.lastIndexOf('@') + 1)
+          result-encoding: string
+
+      - name: Create Sentry release
+        uses: getsentry/action-release@v1
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+        with:
+          environment: production
+          version: ${{ steps.set-version-string.outputs.result }}
