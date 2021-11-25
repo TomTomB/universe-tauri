@@ -1,5 +1,11 @@
 # @universe/client
 
+## 0.0.7
+
+### Patch Changes
+
+- [`7f52b07`](https://github.com/TomTomB/universe/commit/7f52b07b93fd40e368f64696f6d1914eb789a7c3) Thanks [@TomTomB](https://github.com/TomTomB)! - sentry release after client release
+
 ## 0.0.6
 
 ### Patch Changes
