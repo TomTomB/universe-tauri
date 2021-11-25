@@ -53,8 +53,21 @@ jobs:
 
       - name: Check for a universe/client version
         uses: actions/github-script@v5
-        id: get-client-version
+        id: getClientVersion
         with:
-          script: console.log(process.env.DATA)
+          script: |
+            const newVersions = JSON.parse(process.env.DATA);
+            const clientVersion = newVersions.find((v) => v.name === '@universe/client');
+
+            if (clientVersion) {
+              return clientVersion.version;
+            }
+
+            return false;
+          result-encoding: string
         env:
           DATA: ${{ steps.changesets.outputs.publishedPackages }}
+
+        - name: Do a sentry release 
+          if: steps.getClientVersion.outputs.result != 'false'
+          run: echo "${{steps.getClientVersion.outputs.result}}"
