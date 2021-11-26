@@ -3,22 +3,16 @@ body,
 #universe-app {
   min-height: 100%;
   height: 100%;
+  overflow: hidden;
   scroll-behavior: smooth;
 }
 
 *,
 ::before,
 ::after {
-  font-weight: unset;
   user-select: none;
 }
 
 img {
   -webkit-user-drag: none;
-}
-
-body {
-  @supports (overflow: overlay) {
-    overflow: overlay;
-  }
 }

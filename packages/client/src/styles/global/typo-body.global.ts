@@ -1,7 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-// import externalLinkMask from '@assets/masks/external-link-mask.png';
-
-const externalLinkMask = '';
+import externalLinkMask from '../assets/external-link-mask.png';
 
 export const BodyTypography = createGlobalStyle`
   p {
@@ -51,7 +49,7 @@ export const BodyTypography = createGlobalStyle`
         content: '';
         display: inline-block;
         vertical-align: middle;
-        /// -webkit-mask: url(${externalLinkMask}) no-repeat; 
+        -webkit-mask: url(${externalLinkMask}) no-repeat; 
         -webkit-mask-size: contain;
         background-color: ${(props) => props.theme.colors.blue[3]};
         margin-left: 5px;

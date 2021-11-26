@@ -12,5 +12,5 @@ const StyledShell = styled.div`
 `;
 
 export const Shell: FC = ({ children }) => {
-  return <StyledShell> {children} </StyledShell>;
+  return <StyledShell className="no-distract"> {children} </StyledShell>;
 };
