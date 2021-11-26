@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Raleway VF';
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/raleway/Raleway-VF.woff2') format('woff2-variations'),
+    url('/fonts/raleway/Raleway-VF.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Raleway VF';
+  font-style: italic;
+  font-display: swap;
+  src: url('/fonts/raleway/Raleway-Italic-VF.woff2') format('woff2-variations'),
+    url('/fonts/raleway/Raleway-Italic-VF.woff2') format('woff2');
+}

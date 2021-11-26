@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import * as Sentry from '@sentry/react';
 import { Integrations } from '@sentry/tracing';
 import { version } from '../package.json';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme';
+import { Shell } from './domain/shell/views';
+import { BodyTypography, HeadingTypography } from './styles/global';
 
 Sentry.init({
   dsn: import.meta.env.VITE_SENTRY_URL,
@@ -19,10 +21,14 @@ Sentry.init({
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <App />
+      <HeadingTypography />
+      <BodyTypography />
+      <Shell>
+        <App />
+      </Shell>
     </ThemeProvider>
   </React.StrictMode>,
-  document.getElementById('root'),
+  document.getElementById('universe-app'),
 );
 
 document.addEventListener(
