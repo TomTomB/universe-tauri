@@ -5,6 +5,8 @@ import App from './App';
 import * as Sentry from '@sentry/react';
 import { Integrations } from '@sentry/tracing';
 import { version } from '../package.json';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './styles/theme';
 
 Sentry.init({
   dsn: import.meta.env.VITE_SENTRY_URL,
@@ -16,7 +18,9 @@ Sentry.init({
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
