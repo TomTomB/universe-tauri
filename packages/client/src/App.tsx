@@ -12,6 +12,8 @@ function App() {
 
   return (
     <div className="App">
+      <img src="/images/image-splash-caitlynpulsefire.jpg" alt="" />
+
       <header className="App-header">
         <p>Hello Vite + React!</p>
         <p>

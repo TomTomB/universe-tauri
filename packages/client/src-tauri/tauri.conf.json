@@ -57,7 +57,7 @@
         "width": 1280,
         "height": 720,
         "center": true,
-        "resizable": true,
+        "resizable": false,
         "fullscreen": false,
         "transparent": true,
         "decorations": false
