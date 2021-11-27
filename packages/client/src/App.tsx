@@ -11,7 +11,10 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{ display: 'grid', gridTemplateColumns: '1fr auto' }}
+    >
       <img src="/images/image-splash-caitlynpulsefire.jpg" alt="" />
 
       <header className="App-header">

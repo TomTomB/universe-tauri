@@ -9,7 +9,6 @@ export const HeadingTypography = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     font-family: LoL Display;
-    margin: 0 0 0.5em;
 
     :not(.preserve-case) {
       text-transform: uppercase;

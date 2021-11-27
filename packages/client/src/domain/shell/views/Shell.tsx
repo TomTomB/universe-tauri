@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import styled from 'styled-components';
+import { Header } from './Header';
 
 const StyledShell = styled.div`
   width: 100%;
@@ -12,5 +13,10 @@ const StyledShell = styled.div`
 `;
 
 export const Shell: FC = ({ children }) => {
-  return <StyledShell className="no-distract"> {children} </StyledShell>;
+  return (
+    <StyledShell className="no-distract">
+      <Header />
+      {children}
+    </StyledShell>
+  );
 };

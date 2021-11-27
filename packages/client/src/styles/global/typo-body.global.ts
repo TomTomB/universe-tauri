@@ -8,7 +8,6 @@ export const BodyTypography = createGlobalStyle`
     font-weight: normal;
     line-height: 16px;
     letter-spacing: 0.025em;
-    margin-top: 0;
     -webkit-font-smoothing: subpixel-antialiased;
   }
 
