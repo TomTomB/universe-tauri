@@ -16,21 +16,27 @@ export const SplashScreen: FC<SplashScreenContainerProps> = ({ className }) => {
   // const playLoginMusic = useSelector(selectPlayLoginMusic);
 
   const [currentMusic, sendMusic] = useMachine(
-    SplashScreenAudioMachine.machine.withContext({
-      hasIntroAudio: false,
-      isAudioEnabled: true,
-      introAudio: null,
-      loopAudio: null,
-    }),
+    SplashScreenAudioMachine.machine,
+    {
+      context: {
+        hasIntroAudio: false,
+        isAudioEnabled: false,
+        introAudio: null,
+        loopAudio: null,
+      },
+    },
   );
 
   const [currentVideo, sendVideo] = useMachine(
-    SplashScreenVideoMachine.machine.withContext({
-      hasIntroVideo: false,
-      isVideoEnabled: true,
-      introVideo: null,
-      loopVideo: null,
-    }),
+    SplashScreenVideoMachine.machine,
+    {
+      context: {
+        hasIntroVideo: false,
+        isVideoEnabled: true,
+        introVideo: null,
+        loopVideo: null,
+      },
+    },
   );
 
   // useEffect(() => {
@@ -45,13 +51,13 @@ export const SplashScreen: FC<SplashScreenContainerProps> = ({ className }) => {
     <C.StyledSplashScreenContainer className={className}>
       <Video
         music={{
-          loop: '/music/music-splash-starguardian2017-alt.ogg',
+          loop: '/music/music-splash-season2018_post.ogg',
           current: currentMusic,
           send: sendMusic,
         }}
-        picture="/images/image-splash-starguardian2017.jpg"
+        picture="/images/image-splash-season2018.jpg"
         video={{
-          loop: '/videos/video-splash-starguardian2017.webm',
+          loop: '/videos/video-splash-season2018.webm',
           current: currentVideo,
           send: sendVideo,
         }}
