@@ -1,3 +1,4 @@
+import { useStore } from '@universe/client/store';
 import type {
   SplashScreenAudioMachine,
   SplashScreenVideoMachine,
@@ -31,8 +32,7 @@ export const Controls: FC<SplashScreenControlsProps> = ({ music, video }) => {
   // const playLoginMusic = useSelector(selectPlayLoginMusic);
   // const dispatch = useAppDispatch();
 
-  const playLoginAnimations = true;
-  const playLoginMusic = false;
+  const store = useStore();
 
   return (
     <C.SplashScreenControlsContainer>
@@ -55,18 +55,18 @@ export const Controls: FC<SplashScreenControlsProps> = ({ music, video }) => {
             id="disableLoginAnimations"
             label="Disable Login Animations"
             name="disableLoginAnimations"
-            value={!playLoginAnimations}
+            value={!store.playLoginAnimations}
             onChange={() => {
-              // dispatch(togglePlayLoginAnimations());
+              store.setPlayLoginAnimations(!store.playLoginAnimations);
             }}
           />
           <Checkbox
             id="disableLoginMusic"
             label="Disable Login Music"
             name="disableLoginMusic"
-            value={!playLoginMusic}
+            value={!store.playLoginMusic}
             onChange={() => {
-              // dispatch(togglePlayLoginMusic());
+              store.setPlayLoginMusic(!store.playLoginMusic);
             }}
           />
         </C.SplashCheckboxContainer>

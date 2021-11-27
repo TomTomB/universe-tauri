@@ -1,19 +1,24 @@
 import create from 'zustand';
 import { immer } from './core';
 
-export type Theme = 'light' | 'dark' | 'auto';
-
 interface StoreState {
-  theme: Theme;
-  setTheme: (theme: Theme) => void;
+  playLoginAnimations: boolean;
+  playLoginMusic: boolean;
+  setPlayLoginAnimations: (play: boolean) => void;
+  setPlayLoginMusic: (play: boolean) => void;
 }
 
 export const useStore = create<StoreState>(
   immer((set) => ({
-    theme: 'light',
-    setTheme: (theme) =>
+    playLoginAnimations: true,
+    playLoginMusic: false,
+    setPlayLoginAnimations: (play) =>
       set((state) => {
-        state.theme = theme;
+        state.playLoginAnimations = play;
+      }),
+    setPlayLoginMusic: (play) =>
+      set((state) => {
+        state.playLoginMusic = play;
       }),
   })),
 );

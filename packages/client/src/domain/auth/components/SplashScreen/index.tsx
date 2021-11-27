@@ -1,9 +1,11 @@
+import { useStore } from '@universe/client/store';
 import {
   SplashScreenAudioMachine,
   SplashScreenVideoMachine,
 } from '@universe/client/uikit/core/machines';
 import { useMachine } from '@xstate/react';
 import type { FC } from 'react';
+import { useEffect } from 'react';
 import { Controls, Video } from './partials';
 import * as C from './styles';
 
@@ -12,8 +14,7 @@ interface SplashScreenContainerProps {
 }
 
 export const SplashScreen: FC<SplashScreenContainerProps> = ({ className }) => {
-  // const playLoginAnimations = useSelector(selectPlayLoginAnimations);
-  // const playLoginMusic = useSelector(selectPlayLoginMusic);
+  const store = useStore();
 
   const [currentMusic, sendMusic] = useMachine(
     SplashScreenAudioMachine.machine,
@@ -39,13 +40,13 @@ export const SplashScreen: FC<SplashScreenContainerProps> = ({ className }) => {
     },
   );
 
-  // useEffect(() => {
-  //   sendMusic({ type: 'SET_ENABLED', enabled: playLoginMusic });
-  // }, [playLoginMusic, sendMusic]);
+  useEffect(() => {
+    sendMusic({ type: 'SET_ENABLED', enabled: store.playLoginMusic });
+  }, [store.playLoginMusic, sendMusic]);
 
-  // useEffect(() => {
-  //   sendVideo({ type: 'SET_ENABLED', enabled: playLoginAnimations });
-  // }, [playLoginAnimations, sendVideo]);
+  useEffect(() => {
+    sendVideo({ type: 'SET_ENABLED', enabled: store.playLoginAnimations });
+  }, [store.playLoginAnimations, sendVideo]);
 
   return (
     <C.StyledSplashScreenContainer className={className}>
