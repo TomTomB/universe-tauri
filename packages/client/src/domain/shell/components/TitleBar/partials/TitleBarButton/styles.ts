@@ -1,7 +1,7 @@
-import controlClose from './assets/control-close.png';
-import controlHelp from './assets/control-help.png';
-import controlHide from './assets/control-hide.png';
-import controlSettings from './assets/control-settings.png';
+import controlClose from './assets/images/control-close.png';
+import controlHelp from './assets/images/control-help.png';
+import controlHide from './assets/images/control-hide.png';
+import controlSettings from './assets/images/control-settings.png';
 import styled from 'styled-components';
 
 export const TitleBarButtonBase = styled.button`

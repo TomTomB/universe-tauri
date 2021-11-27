@@ -1,5 +1,7 @@
+import { PrimaryReplayButton } from '@universe/client/uikit/forms/components';
+import { CheckboxContainer } from '@universe/client/uikit/forms/components/Checkbox/styles';
 import styled from 'styled-components';
-import lineVerticalFade from './assets/line-vertical-fade.png';
+import lineVerticalFade from './assets/images/line-vertical-fade.png';
 
 export const SplashScreenControlsContainer = styled.div`
   position: absolute;
@@ -17,8 +19,7 @@ export const SplashScreenControlsContainer = styled.div`
   );
 `;
 
-// export const ReplayButton = styled(PrimaryReplayButton)`
-export const ReplayButton = styled.div`
+export const ReplayButton = styled(PrimaryReplayButton)`
   margin-right: 1rem;
 `;
 
@@ -47,15 +48,10 @@ export const UniverseLogo = styled.h2`
   font-size: 25px;
 `;
 
-// export const SplashCheckboxContainer = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   ${CheckboxContainer}:first-of-type {
-//     margin-bottom: 5px;
-//   }
-// `;
-
 export const SplashCheckboxContainer = styled.div`
   display: flex;
   flex-direction: column;
+  ${CheckboxContainer}:first-of-type {
+    margin-bottom: 5px;
+  }
 `;
