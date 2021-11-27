@@ -1,8 +1,7 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import './core/modules';
-import App from './App';
+import './core/modules/i18n.module';
 import * as Sentry from '@sentry/react';
 import { Integrations } from '@sentry/tracing';
 import { version } from '../package.json';
@@ -10,6 +9,8 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/theme';
 import { Shell } from './domain/shell/views';
 import { BodyTypography, HeadingTypography } from './styles/global';
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import { Login } from './domain/auth/views';
 
 Sentry.init({
   dsn: import.meta.env.VITE_SENTRY_URL,
@@ -26,7 +27,12 @@ ReactDOM.render(
         <HeadingTypography />
         <BodyTypography />
         <Shell>
-          <App />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/login" element={<Login />} />
+            </Routes>
+          </BrowserRouter>
         </Shell>
       </ThemeProvider>
     </Suspense>
