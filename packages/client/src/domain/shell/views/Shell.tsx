@@ -1,6 +1,8 @@
 import type { FC } from 'react';
+import { useEffect } from 'react';
 import styled from 'styled-components';
 import { Header } from './Header';
+import { invoke } from '@tauri-apps/api/tauri';
 
 const StyledShell = styled.div`
   width: 100%;
@@ -13,6 +15,10 @@ const StyledShell = styled.div`
 `;
 
 export const Shell: FC = ({ children }) => {
+  useEffect(() => {
+    invoke('close_splashscreen');
+  }, []);
+
   return (
     <StyledShell className="no-distract">
       <Header />

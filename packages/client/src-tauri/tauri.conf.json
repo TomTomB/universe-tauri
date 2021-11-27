@@ -60,7 +60,17 @@
         "resizable": false,
         "fullscreen": false,
         "transparent": true,
-        "decorations": false
+        "decorations": false,
+        "visible": false
+      },
+      {
+        "width": 500,
+        "height": 230,
+        "decorations": false,
+        "transparent": true,
+        "center": true,
+        "url": "splashscreen/index.html",
+        "label": "splashscreen"
       }
     ],
     "security": {
