@@ -1,7 +1,13 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useStore } from './store';
 
 function App() {
   const [count, setCount] = useState(0);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const store = useStore();
+
+  const { t } = useTranslation();
 
   // This is to test sentry
   const breakIt = () => {
@@ -18,7 +24,7 @@ function App() {
       <img src="/images/image-splash-caitlynpulsefire.jpg" alt="" />
 
       <header className="App-header">
-        <p>Hello Vite + React!</p>
+        <p>{t('title')}</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}

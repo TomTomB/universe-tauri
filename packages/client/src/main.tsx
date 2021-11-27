@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
+import './core/modules';
 import App from './App';
 import * as Sentry from '@sentry/react';
 import { Integrations } from '@sentry/tracing';
@@ -20,13 +21,15 @@ Sentry.init({
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <HeadingTypography />
-      <BodyTypography />
-      <Shell>
-        <App />
-      </Shell>
-    </ThemeProvider>
+    <Suspense fallback={null}>
+      <ThemeProvider theme={theme}>
+        <HeadingTypography />
+        <BodyTypography />
+        <Shell>
+          <App />
+        </Shell>
+      </ThemeProvider>
+    </Suspense>
   </React.StrictMode>,
   document.getElementById('universe-app'),
 );
