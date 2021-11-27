@@ -17,24 +17,27 @@ fn close_splashscreen(window: tauri::Window) {
 }
 
 #[tauri::command]
-fn get_league_credentials() -> serde_json::Value {
-  let league_path = get_league_installation_path();
+async fn get_league_credentials() -> serde_json::Value {
+  let league_path = get_league_installation_path().await;
 
   if league_path.is_empty() {
     return serde_json::json!({});
   }
 
-  return get_lockfile(&league_path);
+  return get_lockfile(&league_path).await;
 }
 
 fn main() {
   tauri::Builder::default()
-    .invoke_handler(tauri::generate_handler![close_splashscreen, get_league_credentials])
+    .invoke_handler(tauri::generate_handler![
+      close_splashscreen,
+      get_league_credentials
+    ])
     .run(tauri::generate_context!())
     .expect("error while running tauri application");
 }
 
-fn get_lockfile(league_path: &str) -> serde_json::Value {
+async fn get_lockfile(league_path: &str) -> serde_json::Value {
   let lockfile_path = format!("{}\\lockfile", league_path);
   let lockfile = std::fs::read_to_string(lockfile_path).expect("Unable to read lockfile");
   let lockfile_split: Vec<&str> = lockfile.split(":").collect();
@@ -52,7 +55,7 @@ fn get_lockfile(league_path: &str) -> serde_json::Value {
   return lockfile_json;
 }
 
-fn get_league_installation_path() -> String {
+async fn get_league_installation_path() -> String {
   let commandline = get_league_process();
 
   if commandline.len() > 0 {

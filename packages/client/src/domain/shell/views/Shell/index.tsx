@@ -21,7 +21,7 @@ export const Shell: FC = ({ children }) => {
   }, []);
 
   return (
-    <C.StyledShell className="no-distract">
+    <C.StyledShell>
       <TitleBar />
       {children}
     </C.StyledShell>
