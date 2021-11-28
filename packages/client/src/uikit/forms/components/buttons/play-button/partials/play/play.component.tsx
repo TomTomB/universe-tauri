@@ -1,4 +1,4 @@
-import * as C from './Play.styles';
+import * as C from './play.styles';
 import { PlayButtonState } from '../../play-button.types';
 import { Videos } from './assets';
 import { useCompare } from '@universe/client/uikit/core/hooks';
