@@ -1,8 +1,7 @@
 import {
-  FlatSelect,
-  FramedSelect,
+  PlayButton,
+  PlayButtonState,
   PrimaryMagicButton,
-  Range,
 } from '@universe/client/uikit/forms/components';
 import type { FC } from 'react';
 import { SplashScreen } from '../../components';
@@ -22,20 +21,15 @@ export const Login: FC = () => {
         <div style={{ padding: '0 10px' }}>
           <PrimaryMagicButton playSounds> Login </PrimaryMagicButton>
 
-          <Range id="id" name="ranger" />
-
-          <FlatSelect
-            id="id2"
-            items={{
-              items: [
-                { label: 'Opt', value: 'opt' },
-                { label: 'Opt', value: 'op2' },
-              ],
-              grouped: [],
-            }}
-            label="Label"
-            name="name"
-          />
+          <br />
+          <br />
+          <PlayButton
+            buttonState={PlayButtonState.PLAY}
+            prevButtonState={PlayButtonState.HIDDEN}
+            type="button"
+          >
+            Play
+          </PlayButton>
         </div>
       </div>
     </C.Container>

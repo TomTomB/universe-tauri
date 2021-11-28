@@ -7,3 +7,5 @@ export interface LCUCredentials {
   password: string;
   protocol: string;
 }
+
+export type Currency = 'be' | 'rp';
