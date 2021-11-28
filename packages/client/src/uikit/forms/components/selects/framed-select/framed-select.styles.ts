@@ -1,5 +1,5 @@
 import { Label } from '../../label';
-// import { ScrollContainerStyles } from '@universe/renderer/uikit/common';
+import { ScrollableStyles } from '@universe/client/uikit/common/components';
 import { animated } from 'react-spring';
 import dropdownArrow from '../assets/images/up-down-arrow.png';
 import dropdownArrowLocked from '../assets/images/up-down-arrow-locked.png';
@@ -52,17 +52,6 @@ export const CurrentValue = styled.div`
   min-height: 16px;
 `;
 
-/**
- * Missing: 
- * 
-  ${ScrollContainerStyles.StyledScrollContainer} {
-    max-height: 150px;
-
-    .os-content-glue {
-      max-height: 150px;
-    }
-  }
- */
 export const OptionsContainer = styled.dd<{ openUpward: boolean }>`
   border: 1px solid transparent;
   border-image: linear-gradient(
@@ -81,6 +70,14 @@ export const OptionsContainer = styled.dd<{ openUpward: boolean }>`
   z-index: 2;
   overflow: hidden;
   background: ${(props) => props.theme.colors.black};
+
+  ${ScrollableStyles.StyledScrollable} {
+    max-height: 150px;
+
+    .os-content-glue {
+      max-height: 150px;
+    }
+  }
 
   ${({ openUpward }) =>
     openUpward &&

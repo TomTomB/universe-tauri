@@ -1,4 +1,12 @@
 {
-  "cSpell.words": ["immer", "tauri", "vite", "vitejs", "xstate", "zustand"],
+  "cSpell.words": [
+    "immer",
+    "tauri",
+    "uikit",
+    "vite",
+    "vitejs",
+    "xstate",
+    "zustand"
+  ],
   "rust-analyzer.linkedProjects": ["packages/client/src-tauri/Cargo.toml"]
 }

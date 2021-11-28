@@ -67,14 +67,7 @@ export const useSelectBehavior = (
         });
         optionElement?.focus();
 
-        if (!isOpenChanged) {
-          optionElement?.scrollIntoView({ block: 'center' });
-        } else {
-          // Overlay Scrollbars needs some time before the container can be scrolled
-          setTimeout(() => {
-            optionElement?.scrollIntoView({ block: 'center' });
-          }, 10);
-        }
+        optionElement?.scrollIntoView({ block: 'center' });
       }
     }
   }, [isOpen, isOpenChanged, currentFocusedOptionIndex, items, id]);

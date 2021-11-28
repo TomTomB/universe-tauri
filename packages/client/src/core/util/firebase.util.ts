@@ -13,7 +13,7 @@ import { getFunctions, connectFunctionsEmulator } from 'firebase/functions';
 import { getStorage, connectStorageEmulator } from 'firebase/storage';
 import { getPerformance } from 'firebase/performance';
 import { getDatabase, connectDatabaseEmulator } from 'firebase/database';
-import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
+// import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
 
 export const firebaseApp = initializeApp({
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -30,9 +30,9 @@ if (import.meta.env.DEV) {
   firebaseApp.automaticDataCollectionEnabled = false;
 }
 
-export const appCheck = initializeAppCheck(firebaseApp, {
-  provider: new ReCaptchaV3Provider(import.meta.env.VITE_RECAPTCHA_V3_KEY),
-});
+// export const appCheck = initializeAppCheck(firebaseApp, {
+//   provider: new ReCaptchaV3Provider(import.meta.env.VITE_RECAPTCHA_V3_KEY),
+// });
 
 export const firestore = getFirestore(firebaseApp);
 

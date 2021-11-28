@@ -1,7 +1,7 @@
 import * as C from './flat-select.styles';
-// import { FlatSelectOption, FlatSelectOptionGroup } from './partials';
+import { FlatSelectOption, FlatSelectOptionGroup } from './partials';
 import { NativeSelect } from '../native-select';
-// import { ScrollContainer } from '@universe/renderer/uikit/common';
+import { Scrollable } from '@universe/client/uikit/common/components';
 import { springConfigHarsh } from '@universe/client/uikit/core/constants';
 import { useSelectBehavior } from '../use-select-behavior';
 import { useTransition } from 'react-spring';
@@ -112,7 +112,7 @@ export const FlatSelect: FC<PropsWithChildren<FlatSelectProps>> = ({
                 ref={optionsContainerRef}
                 style={style}
               >
-                {/* <ScrollContainer>
+                <Scrollable>
                   {items.grouped.map(
                     (group) =>
                       group && (
@@ -158,7 +158,7 @@ export const FlatSelect: FC<PropsWithChildren<FlatSelectProps>> = ({
                         </FlatSelectOption>
                       ),
                   )}
-                </ScrollContainer> */}
+                </Scrollable>
               </C.AnimatedOptionsContainer>
             ),
         )}

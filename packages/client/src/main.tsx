@@ -11,6 +11,7 @@ import { Shell } from './domain/shell/views';
 import { BodyTypography, HeadingTypography } from './styles/global';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import { Login } from './domain/auth/views';
+import { rootSelector } from './uikit/core/constants';
 
 Sentry.init({
   dsn: import.meta.env.VITE_SENTRY_URL,
@@ -37,7 +38,7 @@ ReactDOM.render(
       </ThemeProvider>
     </Suspense>
   </React.StrictMode>,
-  document.getElementById('universe-app'),
+  document.getElementById(rootSelector),
 );
 
 document.addEventListener(

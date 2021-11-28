@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { rootSelector } from '../constants';
 
 export const useClickOutside = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -19,7 +20,7 @@ export const useClickOutside = (
   };
 
   useEffect(() => {
-    const root = document.getElementById('root');
+    const root = document.getElementById(rootSelector);
 
     if (!root) {
       return;

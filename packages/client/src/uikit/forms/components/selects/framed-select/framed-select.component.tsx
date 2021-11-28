@@ -1,8 +1,8 @@
 import * as C from './framed-select.styles';
 import { FormField } from '../../base';
-// import { FramedSelectOption } from './partials';
+import { FramedSelectOption } from './partials';
 import { NativeSelect } from '../native-select';
-// import { ScrollContainer } from '@universe/renderer/uikit/common';
+import { Scrollable } from '@universe/client/uikit/common/components';
 import { springConfigHarsh } from '@universe/client/uikit/core/constants';
 import { useSelectBehavior } from '../use-select-behavior';
 import { useTransition } from 'react-spring';
@@ -99,7 +99,7 @@ export const FramedSelect: FC<FramedSelectProps> = ({
                 ref={optionsContainerRef}
                 style={style}
               >
-                {/* <ScrollContainer>
+                <Scrollable>
                   <C.Options role="listbox">
                     {items.map(
                       (option, index) =>
@@ -119,7 +119,7 @@ export const FramedSelect: FC<FramedSelectProps> = ({
                         ),
                     )}
                   </C.Options>
-                </ScrollContainer> */}
+                </Scrollable>
               </C.AnimatedOptionsContainer>
             ),
         )}

@@ -1,5 +1,5 @@
-import dropdownCheck from '../../assets/images/dropdown-check.png';
-import dropdownSelectDot from '../../assets/images/dropdown-select-dot.png';
+import dropdownCheck from '../../../assets/images/dropdown-check.png';
+import dropdownSelectDot from '../../../assets/images/dropdown-select-dot.png';
 import styled, { css } from 'styled-components';
 
 export interface StyledFramedSelectOptionProps {
