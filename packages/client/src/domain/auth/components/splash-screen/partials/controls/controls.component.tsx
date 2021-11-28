@@ -6,7 +6,7 @@ import type {
 import { Checkbox } from '@universe/client/uikit/forms/components';
 import type { FC } from 'react';
 import type { State } from 'xstate';
-import * as C from './styles';
+import * as C from './controls.styles';
 
 interface SplashScreenControlsProps {
   hasIntroVideo?: boolean;
@@ -36,7 +36,7 @@ export const Controls: FC<SplashScreenControlsProps> = ({ music, video }) => {
 
   return (
     <C.SplashScreenControlsContainer>
-      <C.Controls>
+      <C.StyledControls>
         <C.UniverseLogo>Universe</C.UniverseLogo>
         <C.LineVerticalFade />
         <C.ReplayButton
@@ -70,7 +70,7 @@ export const Controls: FC<SplashScreenControlsProps> = ({ music, video }) => {
             }}
           />
         </C.SplashCheckboxContainer>
-      </C.Controls>
+      </C.StyledControls>
     </C.SplashScreenControlsContainer>
   );
 };

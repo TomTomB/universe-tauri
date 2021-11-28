@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { TitleBarButtonBase } from './partials/TitleBarButton/styles';
+import { TitleBarButtonStyles } from './partials/title-bar-button';
 
 export const StyledHeader = styled.header`
   position: absolute;
@@ -17,7 +17,7 @@ export const TitleBarControls = styled.div`
   position: relative;
   top: -1px;
 
-  ${TitleBarButtonBase} {
+  ${TitleBarButtonStyles.TitleBarButtonBase} {
     :not(:last-of-type) {
       margin-right: 15px;
     }

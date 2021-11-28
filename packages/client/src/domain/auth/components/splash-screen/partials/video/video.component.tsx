@@ -5,7 +5,7 @@ import type {
 import type { FC } from 'react';
 import { useRef } from 'react';
 import type { State } from 'xstate';
-import * as C from './styles';
+import * as C from './video.styles';
 
 interface SplashScreenProps {
   video: {

@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import * as C from './styles';
+import * as C from './title-bar-button.styles';
 
 interface TitleBarButtonProps {
   label: string;

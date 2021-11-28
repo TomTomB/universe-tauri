@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import { useEffect } from 'react';
 import { TitleBar } from '../../components';
 import { invoke } from '@tauri-apps/api/tauri';
-import * as C from './styles';
+import * as C from './shell.styles';
 import type { LCUCredentials } from '@universe/client/types';
 
 export const Shell: FC = ({ children }) => {

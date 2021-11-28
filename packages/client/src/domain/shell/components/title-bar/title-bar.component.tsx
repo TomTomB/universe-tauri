@@ -1,6 +1,6 @@
 import { appWindow } from '@tauri-apps/api/window';
 import { TitleBarButton } from './partials';
-import * as C from './styles';
+import * as C from './title-bar.styles';
 
 export const TitleBar = () => {
   const minimizeWindow = () => {

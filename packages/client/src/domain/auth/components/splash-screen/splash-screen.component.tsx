@@ -7,7 +7,7 @@ import { useMachine } from '@xstate/react';
 import type { FC } from 'react';
 import { useEffect } from 'react';
 import { Controls, Video } from './partials';
-import * as C from './styles';
+import * as C from './splash-screen.styles';
 
 interface SplashScreenContainerProps {
   className?: string;

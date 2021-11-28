@@ -1,1 +1,1 @@
-export * from './PrimaryReplayButton';
+export * from './primary-replay-button';

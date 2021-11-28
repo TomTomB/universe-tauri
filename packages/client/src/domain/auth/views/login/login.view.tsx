@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import { SplashScreen } from '../../components';
-import * as C from './styles';
+import * as C from './login.styles';
 
 export const Login: FC = () => {
   return (

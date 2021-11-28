@@ -1,4 +1,4 @@
-import * as C from './styles';
+import * as C from './checkbox.styles';
 import React from 'react';
 import classNames from 'classnames';
 import type { FC } from 'react';

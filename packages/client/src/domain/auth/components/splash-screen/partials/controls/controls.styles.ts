@@ -1,5 +1,7 @@
-import { PrimaryReplayButton } from '@universe/client/uikit/forms/components';
-import { CheckboxContainer } from '@universe/client/uikit/forms/components/Checkbox/styles';
+import {
+  PrimaryReplayButton,
+  CheckboxStyles,
+} from '@universe/client/uikit/forms/components';
 import styled from 'styled-components';
 import lineVerticalFade from './assets/images/line-vertical-fade.png';
 
@@ -23,7 +25,7 @@ export const ReplayButton = styled(PrimaryReplayButton)`
   margin-right: 1rem;
 `;
 
-export const Controls = styled.div`
+export const StyledControls = styled.div`
   position: absolute;
   bottom: 28px;
   left: 32px;
@@ -51,7 +53,7 @@ export const UniverseLogo = styled.h2`
 export const SplashCheckboxContainer = styled.div`
   display: flex;
   flex-direction: column;
-  ${CheckboxContainer}:first-of-type {
+  ${CheckboxStyles.CheckboxContainer}:first-of-type {
     margin-bottom: 5px;
   }
 `;
