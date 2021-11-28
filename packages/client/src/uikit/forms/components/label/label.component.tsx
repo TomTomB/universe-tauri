@@ -1,5 +1,5 @@
 import * as C from './label.styles';
-import React from 'react';
+import { MouseEvent as ReactMouseEvent } from 'react';
 import classNames from 'classnames';
 import type { FC } from 'react';
 
@@ -8,7 +8,7 @@ export interface LabelProps {
   isInvalid: boolean;
   disabled?: boolean;
   id?: string;
-  onClick?: (e: React.MouseEvent<HTMLLabelElement, MouseEvent>) => void;
+  onClick?: (e: ReactMouseEvent<HTMLLabelElement, MouseEvent>) => void;
   className?: string;
 }
 
