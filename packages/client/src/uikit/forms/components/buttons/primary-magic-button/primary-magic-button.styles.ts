@@ -227,8 +227,6 @@ export const MagicButton = styled.button`
   outline: 0;
 
   &:not([disabled]) {
-    cursor: pointer;
-
     &.intro {
       ${FrameIdle} {
         background-color: rgba(30, 35, 40, 0.5);
@@ -363,6 +361,7 @@ export const MagicButton = styled.button`
   }
 
   &[disabled] {
+    cursor: default;
     ${Content} {
       color: ${(props) => props.theme.colors.grey.disabled};
       font-size: 14px;

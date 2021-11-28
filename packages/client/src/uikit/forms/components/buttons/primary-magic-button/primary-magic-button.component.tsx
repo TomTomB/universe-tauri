@@ -2,20 +2,28 @@ import * as C from './primary-magic-button.styles';
 import { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames';
 import type { FC } from 'react';
+import hoverAudioFile from './assets/sounds/sfx-login-button-signin-hover.ogg';
+import clickAudioFile from './assets/sounds/sfx-login-button-signin-click.ogg';
+import { useAudio } from '@universe/client/uikit/core/hooks';
 
 export interface PrimaryMagicButtonProps {
   disabled?: boolean;
   className?: string;
+  playSounds?: boolean;
 }
 
 export const PrimaryMagicButton: FC<PrimaryMagicButtonProps> = ({
   children,
   disabled,
   className,
+  playSounds,
 }) => {
   const [intro, setIntro] = useState(false);
 
   const introTimeout = useRef(0);
+
+  const hoverAudio = useAudio(hoverAudioFile, disabled || !playSounds);
+  const clickAudio = useAudio(clickAudioFile, disabled || !playSounds);
 
   useEffect(() => {
     if (!disabled) {
@@ -35,6 +43,8 @@ export const PrimaryMagicButton: FC<PrimaryMagicButtonProps> = ({
     <C.MagicButton
       className={classNames(className, { intro })}
       disabled={disabled}
+      {...hoverAudio.hover}
+      {...clickAudio.active}
     >
       <C.Container>
         <C.FrameIdle />

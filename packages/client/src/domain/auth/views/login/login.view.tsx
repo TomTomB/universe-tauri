@@ -15,7 +15,7 @@ export const Login: FC = () => {
         <br />
 
         <div style={{ padding: '0 10px' }}>
-          <PrimaryMagicButton> Login </PrimaryMagicButton>
+          <PrimaryMagicButton playSounds> Login </PrimaryMagicButton>
         </div>
       </div>
     </C.Container>
