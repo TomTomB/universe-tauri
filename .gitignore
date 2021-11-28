@@ -5,3 +5,4 @@ dist-ssr
 *.local
 .pnpm-store
 .eslintcache
+tsconfig.tsbuildinfo
