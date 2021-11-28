@@ -1,4 +1,4 @@
-import { Label } from '../Label';
+import { Label } from '../label';
 import { animated } from 'react-spring';
 import styled from 'styled-components';
 
