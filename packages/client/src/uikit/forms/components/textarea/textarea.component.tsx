@@ -3,12 +3,13 @@ import { FormField } from '../base';
 import { springConfigHarsh } from '@universe/client/uikit/core/constants';
 import { useTransition } from 'react-spring';
 import type { FC } from 'react';
-import { FieldError, UseFormRegister } from 'react-hook-form';
+import type { FieldError, UseFormRegister } from 'react-hook-form';
 
 export interface TextareaProps {
   id: string;
   label: string;
   name: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: UseFormRegister<any>;
   placeholder?: string;
   showError?: boolean;

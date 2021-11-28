@@ -1,7 +1,7 @@
 import * as C from './radio.styles';
 import React from 'react';
 import type { FC } from 'react';
-import { UseFormRegister } from 'react-hook-form';
+import type { UseFormRegister } from 'react-hook-form';
 
 export interface RadioProps {
   id: string;
@@ -10,6 +10,7 @@ export interface RadioProps {
   disabled?: boolean;
   className?: string;
   value?: string | number;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register?: UseFormRegister<any>;
   onChange?: (event?: React.ChangeEvent<HTMLInputElement>) => void;
 }

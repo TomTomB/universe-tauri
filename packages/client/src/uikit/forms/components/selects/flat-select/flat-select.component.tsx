@@ -1,5 +1,5 @@
 import * as C from './flat-select.styles';
-import { FlatSelectOption, FlatSelectOptionGroup } from './partials';
+// import { FlatSelectOption, FlatSelectOptionGroup } from './partials';
 import { NativeSelect } from '../native-select';
 // import { ScrollContainer } from '@universe/renderer/uikit/common';
 import { springConfigHarsh } from '@universe/client/uikit/core/constants';
@@ -28,6 +28,7 @@ export interface FlatSelectProps {
   value?: string;
   disabled?: boolean;
   openUpward?: boolean;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register?: UseFormRegister<any>;
 }
 

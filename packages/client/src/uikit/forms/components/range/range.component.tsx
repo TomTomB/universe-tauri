@@ -1,4 +1,4 @@
-import * as C from './Range.styles';
+import * as C from './range.styles';
 import { useBoundingRect } from '@universe/client/uikit/core/hooks';
 import React, { useState } from 'react';
 import type { FC } from 'react';
@@ -15,6 +15,7 @@ export interface RangeProps {
   max?: number;
   step?: number;
   value?: number;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register?: UseFormRegister<any>;
   onChange?: (value: number) => void;
 }
@@ -186,6 +187,7 @@ export const Range: FC<RangeProps> = ({
             '--thumb-translate': `${
               direction === 'horizontal' ? styleValue : -styleValue
             }%`,
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
           } as any
         }
         onKeyDown={handleKeyDown}

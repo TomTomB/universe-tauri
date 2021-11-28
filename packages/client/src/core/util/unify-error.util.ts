@@ -10,6 +10,7 @@ export const unifyError = (error: unknown) => {
     typeof error === 'object' &&
     Object.hasOwnProperty.call(error, 'statusText')
   ) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     errMessage = (error as any).statusText;
   } else if (typeof error === 'string') {
     errMessage = error;

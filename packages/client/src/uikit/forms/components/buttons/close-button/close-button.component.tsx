@@ -1,6 +1,6 @@
 import * as E from './close-button.styles';
 import type { FC } from 'react';
-import { ButtonProps } from '../button.types';
+import type { ButtonProps } from '../button.types';
 
 export interface CloseButtonProps extends ButtonProps {
   btnStyle?: E.CloseButtonStyle;

@@ -1,7 +1,7 @@
 import * as C from './native-select.styles';
 import type { FC } from 'react';
-import { SelectOption } from '../select.types';
-import { UseFormRegister } from 'react-hook-form';
+import type { SelectOption } from '../select.types';
+import type { UseFormRegister } from 'react-hook-form';
 
 export interface NativeSelectProps {
   id: string;
@@ -9,6 +9,7 @@ export interface NativeSelectProps {
   items: SelectOption[];
   disabled?: boolean;
   hidden?: boolean;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register?: UseFormRegister<any>;
   onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 }

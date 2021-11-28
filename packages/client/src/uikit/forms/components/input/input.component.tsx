@@ -12,6 +12,7 @@ export interface InputProps {
   id: string;
   label: string;
   name: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: UseFormRegister<any>;
   type?: string;
   placeholder?: string;

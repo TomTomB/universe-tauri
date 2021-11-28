@@ -1,5 +1,5 @@
 import * as C from './label.styles';
-import { MouseEvent as ReactMouseEvent } from 'react';
+import type { MouseEvent as ReactMouseEvent } from 'react';
 import classNames from 'classnames';
 import type { FC } from 'react';
 

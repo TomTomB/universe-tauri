@@ -1,6 +1,6 @@
 import * as C from './framed-select.styles';
 import { FormField } from '../../base';
-import { FramedSelectOption } from './partials';
+// import { FramedSelectOption } from './partials';
 import { NativeSelect } from '../native-select';
 // import { ScrollContainer } from '@universe/renderer/uikit/common';
 import { springConfigHarsh } from '@universe/client/uikit/core/constants';
@@ -8,7 +8,7 @@ import { useSelectBehavior } from '../use-select-behavior';
 import { useTransition } from 'react-spring';
 import type { FC } from 'react';
 import type { SelectOption } from '../select.types';
-import { UseFormRegister } from 'react-hook-form';
+import type { UseFormRegister } from 'react-hook-form';
 
 export interface FramedSelectProps {
   items: SelectOption[];
@@ -18,6 +18,7 @@ export interface FramedSelectProps {
   value?: string;
   disabled?: boolean;
   openUpward?: boolean;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register?: UseFormRegister<any>;
 }
 
