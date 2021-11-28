@@ -12,7 +12,7 @@ env:
 jobs:
   version:
     timeout-minutes: 15
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code repository
         uses: actions/checkout@v2
