@@ -9,3 +9,15 @@ export interface LCUCredentials {
 }
 
 export type Currency = 'be' | 'rp';
+
+export type Rank =
+  | 'unranked'
+  | 'iron'
+  | 'bronze'
+  | 'silver'
+  | 'gold'
+  | 'platinum'
+  | 'diamond'
+  | 'master'
+  | 'grandmaster'
+  | 'challenger';

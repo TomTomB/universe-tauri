@@ -1,4 +1,6 @@
-export const loadImages = (imagesToLoad: Record<string, string>) => {
+export const loadImages = <T extends Record<string, string>>(
+  imagesToLoad: T,
+) => {
   const imagePromises: Promise<{ id: string; image: HTMLImageElement }>[] = [];
 
   for (const key in imagesToLoad) {
