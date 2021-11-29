@@ -11,7 +11,7 @@ export const SelectLabel = styled(Label)`
 
 export const CurrentContainer = styled.dt`
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 1px solid;
   border-image: linear-gradient(
       to top,
       #695625 0%,
@@ -53,7 +53,7 @@ export const CurrentValue = styled.div`
 `;
 
 export const OptionsContainer = styled.dd<{ openUpward: boolean }>`
-  border: 1px solid transparent;
+  border: 1px solid;
   border-image: linear-gradient(
       to top,
       #695625,
@@ -123,7 +123,7 @@ export const Select = styled.div<{ active: boolean }>`
       &:hover,
       &:focus-visible {
         ${CurrentContainer} {
-          border: 1px solid transparent;
+          border: 1px solid;
           border-image: linear-gradient(to top, #c89b3c, #f0e6d2) 1;
           background: linear-gradient(
             to top,
