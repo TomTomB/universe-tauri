@@ -52,13 +52,13 @@ export const SplashScreen: FC<SplashScreenContainerProps> = ({ className }) => {
     <C.StyledSplashScreenContainer className={className}>
       <Video
         music={{
-          loop: '/music/music-splash-season2018_post.ogg',
+          loop: '/music/music-splash-snowdown2016.ogg',
           current: currentMusic,
           send: sendMusic,
         }}
-        picture="/images/image-splash-season2018.jpg"
+        picture="/images/image-splash-snowdown2016.jpg"
         video={{
-          loop: '/videos/video-splash-season2018.webm',
+          loop: '/videos/video-splash-snowdown2016.webm',
           current: currentVideo,
           send: sendVideo,
         }}
