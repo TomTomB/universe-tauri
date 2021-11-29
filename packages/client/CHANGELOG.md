@@ -1,5 +1,11 @@
 # @universe/client
 
+## 0.1.0
+
+### Minor Changes
+
+- [#19](https://github.com/TomTomB/universe/pull/19) [`448d62d`](https://github.com/TomTomB/universe/commit/448d62de77d44f03c42c8ecd0f1e0a6fb4935eeb) Thanks [@TomTomB](https://github.com/TomTomB)! - Add lots of assets and components
+
 ## 0.0.7
 
 ### Patch Changes
