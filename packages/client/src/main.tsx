@@ -44,8 +44,12 @@ ReactDOM.render(
 document.addEventListener(
   'contextmenu',
   (event) => {
-    event.preventDefault();
-    return false;
+    if (import.meta.env.PROD) {
+      event.preventDefault();
+      return false;
+    }
+
+    return true;
   },
   { capture: true },
 );
