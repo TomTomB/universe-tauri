@@ -1,0 +1,14 @@
+{
+  "cSpell.words": [
+    "immer",
+    "popstar",
+    "tauri",
+    "uikit",
+    "vite",
+    "vitejs",
+    "webm",
+    "xstate",
+    "zustand"
+  ],
+  "rust-analyzer.linkedProjects": ["packages/client/src-tauri/Cargo.toml"]
+}

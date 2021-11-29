@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './index.scss';
+import './core/modules/i18n.module';
 import * as Sentry from '@sentry/react';
 import { Integrations } from '@sentry/tracing';
 import { version } from '../package.json';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './styles/theme';
+import { Shell } from './domain/shell/views';
+import { BodyTypography, HeadingTypography } from './styles/global';
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import { Login } from './domain/auth/views';
+import { rootSelector } from './uikit/core/constants';
 
 Sentry.init({
   dsn: import.meta.env.VITE_SENTRY_URL,
@@ -16,16 +23,33 @@ Sentry.init({
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Suspense fallback={null}>
+      <ThemeProvider theme={theme}>
+        <HeadingTypography />
+        <BodyTypography />
+        <Shell>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/login" element={<Login />} />
+            </Routes>
+          </BrowserRouter>
+        </Shell>
+      </ThemeProvider>
+    </Suspense>
   </React.StrictMode>,
-  document.getElementById('root'),
+  document.getElementById(rootSelector),
 );
 
 document.addEventListener(
   'contextmenu',
   (event) => {
-    event.preventDefault();
-    return false;
+    if (import.meta.env.PROD) {
+      event.preventDefault();
+      return false;
+    }
+
+    return true;
   },
   { capture: true },
 );
