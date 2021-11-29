@@ -1,4 +1,4 @@
-import * as E from './flat-select-option.styles';
+import * as C from './flat-select-option.styles';
 import type { FC } from 'react';
 
 export interface FlatSelectOptionProps {
@@ -16,7 +16,7 @@ export const FlatSelectOption: FC<FlatSelectOptionProps> = ({
   onClick,
 }) => {
   return (
-    <E.StyledFlatSelectOption
+    <C.StyledFlatSelectOption
       tabIndex={disabled ? -1 : 0}
       selected={selected}
       data-disabled={disabled}
@@ -25,6 +25,6 @@ export const FlatSelectOption: FC<FlatSelectOptionProps> = ({
       onClick={onClick}
     >
       {children}
-    </E.StyledFlatSelectOption>
+    </C.StyledFlatSelectOption>
   );
 };

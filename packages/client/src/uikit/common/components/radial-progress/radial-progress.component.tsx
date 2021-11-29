@@ -1,4 +1,4 @@
-import * as E from './radial-progress.styles';
+import * as C from './radial-progress.styles';
 import { PolygonGenerator } from '@universe/client/uikit/core/utils';
 import { RADIAL_PROGRESS_FULL } from './radial-progress.types';
 import type { FC } from 'react';
@@ -19,12 +19,12 @@ export const RadialProgress: FC<RadialProgressProps> = ({
   );
 
   return (
-    <E.StyledRadialProgress className={className} progressType={progressType}>
-      <E.BottomLayer>{bottomLayerChildren} </E.BottomLayer>
-      <E.MiddleLayer path={generator.generatePolygon(progress)}>
+    <C.StyledRadialProgress className={className} progressType={progressType}>
+      <C.BottomLayer>{bottomLayerChildren} </C.BottomLayer>
+      <C.MiddleLayer path={generator.generatePolygon(progress)}>
         {middleLayerChildren}
-      </E.MiddleLayer>
-      <E.TopLayer> {topLayerChildren} </E.TopLayer>
-    </E.StyledRadialProgress>
+      </C.MiddleLayer>
+      <C.TopLayer> {topLayerChildren} </C.TopLayer>
+    </C.StyledRadialProgress>
   );
 };

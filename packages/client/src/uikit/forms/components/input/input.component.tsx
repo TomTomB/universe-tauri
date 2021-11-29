@@ -1,4 +1,4 @@
-import * as E from './input.styles';
+import * as C from './input.styles';
 import { useRef, useState } from 'react';
 import type { FC } from 'react';
 // import { Tooltip, TooltipText } from '@uikit/components/tooltip';
@@ -47,10 +47,10 @@ export const Input: FC<InputProps> = ({
 
   return (
     <FormField>
-      <E.InputLabel htmlFor={id} isInvalid={!!error} disabled={disabled}>
+      <C.InputLabel htmlFor={id} isInvalid={!!error} disabled={disabled}>
         {label}
-      </E.InputLabel>
-      <E.FlatInput
+      </C.InputLabel>
+      <C.FlatInput
         {...register?.(name)}
         id={id}
         spellCheck={spellcheck}
@@ -65,7 +65,7 @@ export const Input: FC<InputProps> = ({
       />
       {type === 'password' && (
         <>
-          <E.TogglePasswordCheckbox
+          <C.TogglePasswordCheckbox
             type="checkbox"
             className={classNames({
               'is-shown': showPassword,
@@ -84,16 +84,16 @@ export const Input: FC<InputProps> = ({
         </>
       )}
       {showError && (
-        <E.ErrorContainer>
+        <C.ErrorContainer>
           {transition(
             (style, error) =>
               error && (
-                <E.ErrorParagraph style={style} role="alert">
+                <C.ErrorParagraph style={style} role="alert">
                   {error?.message}
-                </E.ErrorParagraph>
+                </C.ErrorParagraph>
               ),
           )}
-        </E.ErrorContainer>
+        </C.ErrorContainer>
       )}
     </FormField>
   );

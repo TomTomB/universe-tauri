@@ -1,9 +1,9 @@
-import * as E from './close-button.styles';
+import * as C from './close-button.styles';
 import type { FC } from 'react';
 import type { ButtonProps } from '../button.types';
 
 export interface CloseButtonProps extends ButtonProps {
-  btnStyle?: E.CloseButtonStyle;
+  btnStyle?: C.CloseButtonStyle;
   label?: string;
 }
 
@@ -16,7 +16,7 @@ export const CloseButton: FC<CloseButtonProps> = ({
   onClick,
 }) => {
   return (
-    <E.StyledCloseButton
+    <C.StyledCloseButton
       aria-label={label}
       btnStyle={btnStyle}
       type={type}
@@ -24,9 +24,9 @@ export const CloseButton: FC<CloseButtonProps> = ({
       disabled={disabled}
       onClick={onClick}
     >
-      <E.Contents>
-        <E.CloseIcon btnStyle={btnStyle} />
-      </E.Contents>
-    </E.StyledCloseButton>
+      <C.Contents>
+        <C.CloseIcon btnStyle={btnStyle} />
+      </C.Contents>
+    </C.StyledCloseButton>
   );
 };
