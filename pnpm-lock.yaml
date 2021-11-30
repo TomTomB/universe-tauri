@@ -54,7 +54,7 @@ importers:
       immer: 9.0.7
       react: 17.0.2
       react-dom: 17.0.2
-      react-hook-form: 7.20.4
+      react-hook-form: 7.20.5
       react-i18next: 11.14.3
       react-popper-tooltip: 4.3.1
       react-router-dom: 6.0.2
@@ -79,7 +79,7 @@ importers:
       immer: 9.0.7
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-      react-hook-form: 7.20.4_react@17.0.2
+      react-hook-form: 7.20.5_react@17.0.2
       react-i18next: 11.14.3_i18next@21.5.4+react@17.0.2
       react-popper-tooltip: 4.3.1_react-dom@17.0.2+react@17.0.2
       react-router-dom: 6.0.2_react-dom@17.0.2+react@17.0.2
@@ -5500,8 +5500,8 @@ packages:
     resolution: {integrity: sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==}
     dev: false
 
-  /react-hook-form/7.20.4_react@17.0.2:
-    resolution: {integrity: sha512-Nvy6TnNMlBoR+qS8FpA8lrqtGJ4uoi/MRYEgMEdBMY0HwHVuC7wB1sk6wTjg7FjOUt7QqMAP2W/vOhTWbKrtkQ==}
+  /react-hook-form/7.20.5_react@17.0.2:
+    resolution: {integrity: sha512-xYeBmQW6oqxDYAYVWIoZYC7tRD6lJBJt9b8Rr1Mv/VhZ+ZUCy2IuXlm2YA9i0/zl0TKKxqBWQOxGEb3qyVIhMg==}
     engines: {node: '>=12.0'}
     peerDependencies:
       react: ^16.8.0 || ^17
